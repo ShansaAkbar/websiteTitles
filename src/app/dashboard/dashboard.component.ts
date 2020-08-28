@@ -30,6 +30,7 @@ export class DashboardComponent implements OnInit {
       this.checkUrls()
     }
   }
+
   getTitles = (url) => {
     return fetch(`https://cors-anywhere.herokuapp.com/${url}`)//to resolve CORS issue
       .then((response) => response.text())
