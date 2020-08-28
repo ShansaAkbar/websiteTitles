@@ -1,0 +1,27 @@
+<div class="container">
+<form [formGroup]='loginForm'>
+  <div class="container" role="main">
+    <div class="card highlight-card card-small">
+      <div class="col-12">
+        <label>User Name</label>
+        <input type="text" formControlName="username">
+      </div>
+      <div class="col-12">
+        <label>Password</label>
+        <input type="password" formControlName="password">
+      </div>
+    </div>
+    <div class="container col-12">
+      <button type="submit" (click)="NavigateToDashBoard(loginForm.value)">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
+<div style="text-align:center ;">
+  <div>hint: <span>user@gmail.com</span></div>
+  <div>
+    <span>123</span>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

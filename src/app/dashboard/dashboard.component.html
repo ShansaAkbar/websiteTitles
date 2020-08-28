@@ -1,0 +1,36 @@
+
+<div class="container">
+<div class="container">
+  <button (click)='logout()'>Log out</button>
+</div>
+<div class="spinner-border text-dark" role="status" *ngIf="loader">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="container">
+  <div>Kinldy add your Comma separated Urls</div>
+  <input type="text" [(ngModel)]='Urls' [ngModelOptions]="{standalone: true}">
+  <button [disabled]='disableBton' (click)='submitURLs()'>Submit</button>
+</div>
+<div>
+  <label><b>Urls:</b></label>
+</div>
+<div>
+  <ul *ngFor='let item of UrlListing'>
+    <li>
+      {{item}}
+    </li>
+  </ul>
+</div>
+<div>
+  <label><b>Title:</b></label>
+</div>
+<div>
+  <ul *ngFor='let item of titles'>
+    <li>
+      {{item}}
+    </li>
+  </ul>
+</div>
+
+
+</div>
